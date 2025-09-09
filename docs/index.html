@@ -1,1 +1,332 @@
-Add index.html in docs folder
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Özel 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('IMG_2244.JPG') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      text-align: center;
+    }
+    .overlay {
+      background: rgba(255, 154, 158, 0.6);
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    p {
+      font-size: 1.1em;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 15px;
+      border-radius: 15px;
+      display: inline-block;
+      max-width: 90%;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .heart {
+      position: absolute;
+      color: rgba(255, 0, 100, 0.7);
+      font-size: 24px;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      background: #ff477e;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #e03a6d;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      max-width: 90%;
+      position: relative;
+      margin: 30px auto;
+    }
+    .slides {
+      display: none;
+    }
+    .slides img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.5);
+    }
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #ff477e;
+    }
+
+    /* Telefon uyumluluk */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+        padding: 10px;
+      }
+      button {
+        font-size: 0.9em;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>💖 Bu Site Büşra Hanıma Rezerve Edilmiştir 💖</h1>
+    <p>Hayatıma kattığın tüm güzellikler için teşekkür ederim. Seninle hayat hiç olamayacak kadar güzel. İYİ Kİ VARSIN BÜŞRA EŞŞŞEĞİ.🌸</p>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <div class="slides fade">
+        <img src="LURK0010.JPG" alt="Foto 1">
+      </div>
+      <div class="slides fade">
+        <img src="JUHF0227.JPG" alt="Foto 2">
+      </div>
+      <div class="slides fade">
+        <img src="WVSE6028.JPG" alt="Foto 3">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <button onclick="showMessage()">Tıkla ve Gör ✨</button>
+    <p id="hiddenMessage" style="display:none; margin-top:20px; font-weight:bold; color:#e60073; font-size:1.3em;">Seni Çoooookk Seviyorum ❤️</p>
+  </div>
+   <!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arda & Büşra Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffe6f0;
+  }
+  h1 {
+    color: #e60073;
+  }
+  #soruImg {
+    margin-top: 20px;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  input {
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e60073;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #ff477e;
+  }
+</style>
+</head>
+<body>
+<h1>Arda & Büşra Quiz</h1>
+<div id="quizContainer">
+  <p id="soruText"></p>
+  <input type="text" id="cevapInput" placeholder="Cevabını yaz">
+  <br>
+  <button onclick="kontrolEt()">Gönder</button>
+  <div>
+    <img id="soruImg" src="" alt="Cevap Görseli">
+  </div>
+</div>
+<script>
+const sorular = [
+  {soru: "Arda ve Büşra'nın ilişkisi ne zaman başlamıştır?", cevap: "12.11.2023"},
+  {soru: "Arda'nın en sevdiği futbolcu kimdir?", cevap: "messi"},
+  {soru: "Arda'nın en sevdiği tatlı nedir?", cevap: "büşra"},
+  {soru: "Arda'nın en iyi yaptığı şey nedir?", cevap: "her şey"},
+  {soru: "Arda Büşra'yı ne kadar seviyor?", cevap: "her şeyden çok"}
+];
+
+let soruIndex = 0;
+const dogruImg = "öpücük.jpg"; // doğru cevaptaki görsel
+const yanlisImg = "nah.png";   // yanlış cevaptaki görsel
+
+function gosterSoru() {
+  document.getElementById('soruText').innerText = sorular[soruIndex].soru;
+  document.getElementById('cevapInput').value = '';
+  document.getElementById('soruImg').src = '';
+}
+
+gosterSoru();
+
+function kontrolEt() {
+  const kullaniciCevap = document.getElementById('cevapInput').value.toLowerCase().trim();
+  const dogruCevap = sorular[soruIndex].cevap.toLowerCase();
+
+  if (kullaniciCevap === dogruCevap) {
+    document.getElementById('soruImg').src = dogruImg;
+  } else {
+    document.getElementById('soruImg').src = yanlisImg;
+  }
+
+  soruIndex++;
+  if (soruIndex < sorular.length) {
+    setTimeout(gosterSoru, 1500); // 1.5 saniye sonra bir sonraki soru
+  } else {
+    setTimeout(() => {
+      alert('Quiz tamamlandı!');
+      soruIndex = 0;
+      gosterSoru();
+    }, 1500);
+  }
+}
+</script>
+</body>
+</html>
+
+  <div class="hearts"></div>
+
+  <script>
+    function showMessage(){
+      document.getElementById('hiddenMessage').style.display = 'block';
+    }
+
+    function createHeart(){
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      document.querySelector('.hearts').appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+    setInterval(createHeart, 400);
+
+    // Slideshow Script
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+</body>
+</html>
